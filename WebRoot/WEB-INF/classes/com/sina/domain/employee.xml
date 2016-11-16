@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<package name="Employee" namespace="/employee" extends="struts-default" >
+	<!-- class="EmployeeAction"指向spring 配置文件里的bean的id -->
+	<action name="employee*" class="EmployeeAction" method="{1}">
+		<result name="loginOk" >/WEB-INF/MainFrame.jsp</result>
+		<result name="reLogin">/WEB-INF/reLogin.jsp</result>
+		<result name="addUi">/WEB-INF/addEmployee.jsp</result>
+		<result name="queryAllUi">/WEB-INF/queryAll.jsp</result>
+		<result name="error">/WEB-INF/error.jsp</result>
+	</action>
+</package>
+</struts>    
